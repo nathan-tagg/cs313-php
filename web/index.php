@@ -11,18 +11,18 @@ if (isset ($last))
 $change = time () - $last;
 if ( $change > 86400)
 {
-echo "<p style:'color: white; font-family:helvetica;'>Welcome back!<p> <br> <p style:'color: white; font-family:helvetica;'>You last visited on<p> ". date("m/d/y",$last) ;
+echo "<p>Welcome back!<p> <br> <p>You last visited on<p> ". date("m/d/y",$last) ;
 // Tells the user when they last visited if it was over a day ago
 }
 else
 {
-echo "<p style:'color: white; font-family:helvetica;'>Thanks for using our site<p>!";
+echo "<p>Thanks for using our site<p>!";
 //Gives the user a message if they are visiting again in the same day
 }
 }
 else
 {
-echo "<p style:'color: white; font-family:helvetica;'>Welcome to our site!<p>";
+echo "<p>Welcome to our site!<p>";
 //Greets a first time user
 }
 
