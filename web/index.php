@@ -1,6 +1,6 @@
 <?php
 
-echo "<!DOCTYPE html>
+echo '<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -10,6 +10,6 @@ echo "<!DOCTYPE html>
   <body>
     <h1>Homepage</h1>
   </body>
-</html>";
+</html>';
 
 ?>
