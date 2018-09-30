@@ -1,29 +1,27 @@
 <?php
 
-if(isset($_COOKIE['AboutVisit']))
+if(isset($_COOKIE['Visit']))
 {
-$last = $_COOKIE['AboutVisit']; }
+    $lastVisit = $_COOKIE['Visit'];
+}
+
 $year = 31536000 + time() ;
-//this adds one year to the current time, for the cookie expiration
 setcookie(AboutVisit, time (), $year) ;
-if (isset ($last))
+
+if (isset ($lastVisit))
 {
-$change = time () - $last;
-if ( $change > 86400)
-{
-echo "<p>Welcome back!<p> <br> <p>You last visited on<p> ". date("m/d/y",$last) ;
-// Tells the user when they last visited if it was over a day ago
+    if ((time () - $lastVisit) > 86400)
+    {
+        echo "Welcome back! You last visited on " . date("m/d/y",$lastVisit) ;
+    }
+    else
+    {
+        echo "<p>Thanks for visiting my Homepage again today!";
+    }
 }
 else
 {
-echo "<p>Thanks for using our site<p>!";
-//Gives the user a message if they are visiting again in the same day
-}
-}
-else
-{
-echo "<p>Welcome to our site!<p>";
-//Greets a first time user
+    echo "Welcome to my Homepage!";
 }
 
 echo '<!DOCTYPE html>

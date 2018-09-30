@@ -1,0 +1,30 @@
+After completing the assignment, please answer the questions in this text file and submit it to I-Learn.
+
+1. Copy and paste the URL for your web application:
+
+
+2. Copy and paste the URL for your source code repository (e.g., GitHub):
+
+
+3. Briefly list and describe the elements of the application that are functioning. Include any special instructions about how to login and/or use your application.
+
+The homepage, the PHP greeting, (ps - you need to have cookies enabled for the greeting to work)
+
+4. Briefly describe any pieces of the assignment that are not yet working correctly.
+
+None.
+
+5. Briefly describe the "coolest" thing you learned while completing this assignment.
+
+I learned that it is possible to do a lot more with PHP than I previously thought. I even had PHP creating my entire homepage! How cool is that?
+
+6. What is the difference between an HTTP Get and Post? When should each be used?
+
+
+7. Please select the category you feel best describes your assignment:
+
+E - Shows creativity and excels above and beyond requirements
+
+
+8. Provide a brief justification (1-2 sentences) for selecting that category.
+   I worked really hard on this assignment.
