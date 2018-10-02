@@ -6,6 +6,11 @@ body {
   background-size: cover;
 }
 
+div {
+  background-color: white;
+  opacity: .2;
+}
+
 h1 {
   color: white;
   font-family: helvetica;
@@ -15,6 +20,7 @@ h1 {
 }
 
 p {
+  width: 69%;
   color: white;
   font-family: helvetica;
   font-size: 10px;
@@ -22,8 +28,16 @@ p {
 }
 
 a {
+    background-color: red;
+  box-shadow: 0 5px 0 darkred;
   color: white;
-  font-family: helvetica;
-  font-size: 10px;
-  text-shadow: 0px 0px 5px black;
+  padding: 1em 1.5em;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a:hover {
+  background-color: #ce0606;
+  cursor: pointer;
 }

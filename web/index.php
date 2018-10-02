@@ -32,7 +32,16 @@ echo '<!DOCTYPE html>
     <link rel="stylesheet" type="text/css" href="./siameseFightingFish.css">
   </head>
   <body>
+
     <h1>Homepage</h1>
+
+    <div>
+      <p>Welcome! My name is Nathan, and as you may have gathered, I LOVE fishkeeping.
+        I started keeping fish when I was young, and the hobby has become a large part
+        of my life. from here you can</p> <br>
+      <a href="./assignments.html">veiw my assignments.</a>
+    </div>
+
   </body>
 </html>';
 
