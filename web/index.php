@@ -12,16 +12,16 @@ if (isset ($lastVisit))
 {
     if ((time () - $lastVisit) > 86400)
     {
-        echo "Welcome back! You last visited on " . date("m/d/y",$lastVisit) ;
+        echo "<p>Welcome back! You last visited on " . date("m/d/y",$lastVisit) . "</p>" ;
     }
     else
     {
-        echo "<p>Thanks for visiting my Homepage again today!";
+        echo "<p>Thanks for visiting my Homepage again today!</p>";
     }
 }
 else
 {
-    echo "Welcome to my Homepage!";
+    echo "<p>Welcome to my Homepage!</p>";
 }
 
 echo '<!DOCTYPE html>
