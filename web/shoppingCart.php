@@ -2,7 +2,7 @@
 $itemOne   = htmlspecialchars($_POST["numberOfItemOne"]);
 $itemTwo   = htmlspecialchars($_POST["numberOfItemTwo"]);
 $itemThree = htmlspecialchars($_POST["numberOfItemThree"]);
-$itemFour  = htmlspecialchars($_POST["numberOfItemOnFour");
+$itemFour  = htmlspecialchars($_POST["numberOfItemFour"]);
 $itemFive  = htmlspecialchars($_POST["numberOfItemFive"]);
 $itemSix   = htmlspecialchars($_POST["numberOfItemSix"]);
 
