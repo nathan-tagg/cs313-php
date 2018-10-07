@@ -7,17 +7,17 @@ $itemFive  = htmlspecialchars($_POST["numberOfItemFive"]);
 $itemSix   = htmlspecialchars($_POST["numberOfItemSix"]);
 
 if (isset($_COOKIE['one']))   { $_COOKIE['one'] += $itemOne; }
-else { $_COOKIE['one'] = $itemOne; }
+else { setcookie(one, $itemOne, time() + 2147483647); }
 if (isset($_COOKIE['two']))   { $_COOKIE['two'] += $itemTwo; }
-else { $_COOKIE['two'] = $itemTwo; }
+else { setcookie(two, $itemTwo, time() + 2147483647); }
 if (isset($_COOKIE['three'])) { $_COOKIE['three'] += $itemThree; }
-else { $_COOKIE['three'] = $itemThree; }
+else { setcookie(three, $itemThree, time() + 2147483647); }
 if (isset($_COOKIE['four']))  { $_COOKIE['four'] += $itemFour; }
-else { $_COOKIE['four'] = $itemFour; }
+else { setcookie(four, $itemFour, time() + 2147483647); }
 if (isset($_COOKIE['five']))  { $_COOKIE['five'] += $itemFive; }
-else { $_COOKIE['four'] = $itemFive; }
+else { setcookie(five, $itemFive, time() + 2147483647); }
 if (isset($_COOKIE['six']))   { $_COOKIE['six'] += $itemSix; }
-else { $_COOKIE['six'] = $itemSix; }
+else { setcookie(six, $itemSix, time() + 2147483647); }
 ?>
 
 <!DOCTYPE html>
