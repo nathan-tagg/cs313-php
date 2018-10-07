@@ -32,12 +32,12 @@ $_COOKIE['six'] = $itemSix;
 
     <?php
 
-      (0 == $itemOne) ? : echo "one";
-      (0 == $itemTwo) ? : echo "two";
-      (0 == $itemThree) ? : echo "three";
-      (0 == $itemFour) ? : echo "four";
-      (0 == $itemFive) ? : echo "five";
-      (0 == $itemSix) ? : echo "six";
+      if ($itemOne) echo "one";
+      if ($itemTwo) echo "two";
+      if ($itemThree) echo "three";
+      if ($itemFour) echo "four";
+      if ($itemFive) echo "five";
+      if ($itemSix) echo "six";
 
     ?>
 
