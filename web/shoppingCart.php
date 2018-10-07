@@ -34,22 +34,22 @@
     ?>
 
     <?if ($itemOne) echo $itemOne . " * one";?>
-    <input type="button" name="deleteTwo" onclick="deleteItem('one'); location.reload();" value="Delete this item">
+    <input type="button" name="deleteTwo" onclick="deleteItem('one'); location.reload(true);" value="Delete this item">
     <br>
     <?if ($itemTwo) echo $itemTwo . " * two";?>
-    <input type="button" name="deleteTwo" onclick="deleteItem('two'); location.reload();" value="Delete this item">
+    <input type="button" name="deleteTwo" onclick="deleteItem('two'); location.reload(true);" value="Delete this item">
     <br>
     <?if ($itemThree) echo $itemThree . " * three";?>
-    <input type="button" name="deleteThree" onclick="deleteItem('three'); location.reload();" value="Delete this item">
+    <input type="button" name="deleteThree" onclick="deleteItem('three'); location.reload(true);" value="Delete this item">
     <br>
     <?if ($itemFour) echo $itemFour . " * four";?>
-    <input type="button" name="deleteFour" onclick="deleteItem('four'); location.reload();" value="Delete this item">
+    <input type="button" name="deleteFour" onclick="deleteItem('four'); location.reload(true);" value="Delete this item">
     <br>
     <?if ($itemFive) echo $itemFive . " * five";?>
-    <input type="button" name="deleteFive" onclick="deleteItem('five'); location.reload();" value="Delete this item">
+    <input type="button" name="deleteFive" onclick="deleteItem('five'); location.reload(true);" value="Delete this item">
     <br>
     <?if ($itemSix) echo $itemSix . " * six";?>
-    <input type="button" name="deleteSix" onclick="deleteItem('six'); location.reload();" value="Delete this item">
+    <input type="button" name="deleteSix" onclick="deleteItem('six'); location.reload(true);" value="Delete this item">
 
   </body>
 </html>
