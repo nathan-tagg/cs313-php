@@ -6,7 +6,7 @@ if(isset($_COOKIE['Visit']))
 }
 
 $year = 31536000 + time() ;
-setcookie(AboutVisit, time (), $year) ;
+setcookie(Visit, time (), $year) ;
 
 if (isset ($lastVisit))
 {
