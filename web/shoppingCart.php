@@ -34,7 +34,7 @@
     ?>
 
     <?if ($itemOne) echo $itemOne . " * one";?>
-    <input type="button" name="deleteTwo" onclick="deleteItem('one'); location.reload(true);" value="Delete this item">
+    <input type="button" name="deleteOne" onclick="deleteItem('one'); location.reload(true);" value="Delete this item">
     <br>
     <?if ($itemTwo) echo $itemTwo . " * two";?>
     <input type="button" name="deleteTwo" onclick="deleteItem('two'); location.reload(true);" value="Delete this item">
