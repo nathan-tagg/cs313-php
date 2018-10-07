@@ -30,16 +30,17 @@ $_COOKIE['six'] = $itemSix;
   </head>
   <body>
 
-    <?php
-
-      if ($itemOne) echo "one";
-      if ($itemTwo) echo "two";
-      if ($itemThree) echo "three";
-      if ($itemFour) echo "four";
-      if ($itemFive) echo "five";
-      if ($itemSix) echo "six";
-
-    ?>
+    <?if ($itemOne) echo "one";?>
+    <br>
+    <?if ($itemTwo) echo "two";?>
+    <br>
+    <?if ($itemThree) echo "three";?>
+    <br>
+    <?if ($itemFour) echo "four";?>
+    <br>
+    <?if ($itemFive) echo "five";?>
+    <br>
+    <?if ($itemSix) echo "six";?>
 
   </body>
 </html>
