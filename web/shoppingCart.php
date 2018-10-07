@@ -6,12 +6,19 @@ $itemFour  = htmlspecialchars($_POST["numberOfItemFour"]);
 $itemFive  = htmlspecialchars($_POST["numberOfItemFive"]);
 $itemSix   = htmlspecialchars($_POST["numberOfItemSix"]);
 
-if (isset($_COOKIE['one']))   { $_COOKIE['one'] += $itemOne; }
-if (isset($_COOKIE['two']))   { $_COOKIE['two'] += $itemTwo; }
-if (isset($_COOKIE['three'])) { $_COOKIE['three'] += $itemThree; }
-if (isset($_COOKIE['four']))  { $_COOKIE['four'] += $itemFour; }
-if (isset($_COOKIE['five']))  { $_COOKIE['five'] += $itemFive; }
-if (isset($_COOKIE['six']))   { $_COOKIE['six'] += $itemSix; }
+if (isset($_COOKIE['one']))   { $_COOKIE['one'] += $itemOne; $itemOne = $_COOKIE['one']; }
+if (isset($_COOKIE['two']))   { $_COOKIE['two'] += $itemTwo; $itemTwo = $_COOKIE['two']; }
+if (isset($_COOKIE['three'])) { $_COOKIE['three'] += $itemThree; $itemThree = $_COOKIE['three']; }
+if (isset($_COOKIE['four']))  { $_COOKIE['four'] += $itemFour; $itemFour = $_COOKIE['four']; }
+if (isset($_COOKIE['five']))  { $_COOKIE['five'] += $itemFive; $itemFive = $_COOKIE['five']; }
+if (isset($_COOKIE['six']))   { $_COOKIE['six'] += $itemSix; $itemSix = $_COOKIE['six']; }
+
+$_COOKIE['one'] = $itemOne;
+$_COOKIE['two'] = $itemTwo;
+$_COOKIE['three'] = $itemThree;
+$_COOKIE['four'] = $itemFour;
+$_COOKIE['five'] = $itemFive;
+$_COOKIE['six'] = $itemSix;
 
  ?>
 
@@ -22,9 +29,10 @@ if (isset($_COOKIE['six']))   { $_COOKIE['six'] += $itemSix; }
     <title></title>
   </head>
   <body>
-    <p>One: <?=$itemOne?></p>
-    <p>Two: <?=$itemTwo?></p>
-    <p>Three: <?=$itemThree?></p>
+
+    <?php if ($_COOKIE['one'] > 0):?>
+
+    <?php endif; ?>
 
   </body>
 </html>
