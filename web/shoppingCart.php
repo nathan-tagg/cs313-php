@@ -19,7 +19,7 @@
     $itemFive  = htmlspecialchars($_POST["numberOfItemFive"]);
     $itemSix   = htmlspecialchars($_POST["numberOfItemSix"]);
 
-    if (isset($_COOKIE['one']))   { setcookie(one, $_COOKIE['one'] + $itemOne, time() + 2147483647); $itemOne += $_COOKIE['one']; }
+    if (isset($_COOKIE['one']))   { setcookie(one, $_COOKIE['one'] + $itemOne, time() + 2147483647); $_COOKIE['one'] += $itemOne; $itemOne = 0; }
     else { setcookie(one, $itemOne, time() + 2147483647); $_COOKIE['one'] += $itemOne; $itemOne = 0; }
     if (isset($_COOKIE['two']))   { setcookie(two, $_COOKIE['two'] + $itemTwo, time() + 2147483647); $itemTwo += $_COOKIE['two']; }
     else { setcookie(two, $itemTwo, time() + 2147483647); $itemTwo += $_COOKIE['two']; }
