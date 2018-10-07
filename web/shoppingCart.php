@@ -28,17 +28,17 @@ else { setcookie(six, $itemSix, time() + 2147483647); }
   </head>
   <body>
 
-    <?if ($itemOne) echo $_COOKIE['one'] . " * one";?>
+    <?if ($_COOKIE['one']) echo $_COOKIE['one'] . " * one";?>
     <br>
-    <?if ($itemTwo) echo $_COOKIE['two'] . " * two";?>
+    <?if ($_COOKIE['two']) echo $_COOKIE['two'] . " * two";?>
     <br>
-    <?if ($itemThree) echo $_COOKIE['three'] . " * three";?>
+    <?if ($_COOKIE['three']) echo $_COOKIE['three'] . " * three";?>
     <br>
-    <?if ($itemFour) echo $_COOKIE['four'] . " * four";?>
+    <?if ($_COOKIE['four']) echo $_COOKIE['four'] . " * four";?>
     <br>
-    <?if ($itemFive) echo $_COOKIE['five'] . " * five";?>
+    <?if ($_COOKIE['five']) echo $_COOKIE['five'] . " * five";?>
     <br>
-    <?if ($itemSix) echo $_COOKIE['six'] . " * six";?>
+    <?if ($_COOKIE['six']) echo $_COOKIE['six'] . " * six";?>
 
   </body>
 </html>
