@@ -14,7 +14,7 @@ Store page, Shopping cart page, saving the shopping cart, all other requirements
 
 4. Briefly describe any pieces of the assignment that are not yet working correctly.
 
-none.
+I am having trouble with getting the cookie to update without refreshing the page.
 
 5. Briefly describe the "coolest" thing you learned while completing this assignment.
 
