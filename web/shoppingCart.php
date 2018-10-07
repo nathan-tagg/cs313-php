@@ -20,7 +20,7 @@
     $itemSix   = htmlspecialchars($_POST["numberOfItemSix"]);
 
     if (isset($_COOKIE['one']))   { setcookie(one, $_COOKIE['one'] + $itemOne, time() + 2147483647); $itemOne += $_COOKIE['one']; }
-    else { setcookie(one, $itemOne, time() + 2147483647); $itemOne += $_COOKIE['one']; }
+    else { setcookie(one, $itemOne, time() + 2147483647); $_COOKIE['one']; += $itemOne; $itemOne = 0; }
     if (isset($_COOKIE['two']))   { setcookie(two, $_COOKIE['two'] + $itemTwo, time() + 2147483647); $itemTwo += $_COOKIE['two']; }
     else { setcookie(two, $itemTwo, time() + 2147483647); $itemTwo += $_COOKIE['two']; }
     if (isset($_COOKIE['three'])) { setcookie(three, $_COOKIE['three'] + $itemThree, time() + 2147483647); $itemThree += $_COOKIE['three']; }
@@ -33,7 +33,7 @@
     else { setcookie(six, $itemSix, time() + 2147483647); $itemSix += $_COOKIE['six']; }
     ?>
 
-    <?if ($itemOne) echo $itemOne . " * one";?>
+    <?if ($_COOKIE['one']) echo $_COOKIE['one'] . " * one";?>
     <input type="button" name="deleteOne" onclick="deleteItem('one'); location.reload(true);" value="Delete this item">
     <br>
     <?if ($itemTwo) echo $itemTwo . " * two";?>
