@@ -31,7 +31,19 @@
         echo $e->getMessage();
       }
 
-?>
+      $statement = $conn->prepare("SELECT book, chapter, verse, content FROM scriptures");
+      $statement->execute();
+
+      while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+
+      {
+        echo '<p>';
+        echo '<strong>' . $row['book'] . ' ' . $row['chapter'] . ':';
+        echo $row['verse'] . '</strong>' . ' - ' . $row['content'];
+        echo '</p>';
+      }
+
+      ?>
 
   </body>
 </html>
