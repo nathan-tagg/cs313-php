@@ -11,19 +11,18 @@
     <?
       $conn = pg_pconnect("dbname=ddgliuko4bnn30");
       if (!$conn) {
-        echo "An error occurred.\n";
+        echo "ERROR: unable to connect to database\n";
         exit;
       }
 
       $result = pg_query($conn, "SELECT");
         if (!$result) {
-          echo "An error occurred.\n";
+          echo "ERROR: invalid query\n";
           exit;
         }
 
       while ($row = pg_fetch_row($result)) {
-        echo "Author: $row[0]  E-mail: $row[1]";
-        echo "<br />\n";
+        
       }
     ?>
 
