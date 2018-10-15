@@ -6,6 +6,8 @@
   </head>
   <body>
 
+    <h1>Ta 05</h1>
+
     <?
       $conn = pg_pconnect("dbname=ddgliuko4bnn30");
       if (!$conn) {
