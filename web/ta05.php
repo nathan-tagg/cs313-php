@@ -35,7 +35,6 @@
       $statement->execute();
 
       while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-
       {
         echo '<p>';
         echo '<strong>' . $row['book'] . ' ' . $row['chapter'] . ':';
