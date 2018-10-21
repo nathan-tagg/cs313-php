@@ -17,6 +17,7 @@ div {
 
 img {
   vertical-align: 30%;
+  object-fit: contain;
 }
 
 p {

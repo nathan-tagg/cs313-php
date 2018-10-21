@@ -234,3 +234,60 @@ INSERT INTO EMAIL
    , (SELECT system_user_id
       FROM system_user
       WHERE system_user_name = 'Nathan'));
+
+      -- Zabit Magomedshapirov
+      INSERT INTO PERSON
+      ( SELECT nextval('person_s1')
+      , (SELECT common_lookup_id
+         FROM common_lookup
+         WHERE common_lookup_table = 'PERSON' AND common_lookup_type = 'co-worker')
+      , 'Zabit'
+      , ''
+      , 'Magomedshapirov'
+      , DATE '03/01/1991'
+      , 'https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiUruzz9JbeAhXfFTQIHYk0BBEQjRx6BAgBEAU&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FZabit_Magomedsharipov&psig=AOvVaw1_6zIx_OsO2QYcooxGngRF&ust=1540189968008372'
+      , (SELECT system_user_id
+         FROM system_user
+         WHERE system_user_name = 'Nathan'));
+
+      -- His phone number
+      INSERT INTO TELEPHONE
+      ( SELECT nextval('telephone_s1')
+      , (SELECT common_lookup_id
+         FROM common_lookup
+         WHERE common_lookup_table = 'TELEPHONE' AND common_lookup_type = 'work')
+      , (SELECT currval('person_s1'))
+      , 3
+      , 333
+      , 3333333
+      , (SELECT system_user_id
+         FROM system_user
+         WHERE system_user_name = 'Nathan'));
+
+      -- His address
+      INSERT INTO ADDRESS
+      ( SELECT nextval('address_s1')
+      , (SELECT common_lookup_id
+         FROM common_lookup
+         WHERE common_lookup_table = 'ADDRESS' AND common_lookup_type = 'home')
+      , (SELECT currval('person_s1'))
+      , 'Russia'
+      , 'Dagastan'
+      , '85309-332'
+      , '86 Blyat DR'
+      , ''
+      , (SELECT system_user_id
+         FROM system_user
+         WHERE system_user_name = 'Nathan'));
+
+      -- His email
+      INSERT INTO EMAIL
+      ( SELECT nextval('email_s1')
+      , (SELECT common_lookup_id
+         FROM common_lookup
+         WHERE common_lookup_table = 'EMAIL' AND common_lookup_type = 'work')
+      , currval('person_s1')
+      , 'magomedshapirov@gmail.com'
+      , (SELECT system_user_id
+         FROM system_user
+         WHERE system_user_name = 'Nathan'));

@@ -26,7 +26,7 @@
       die();
     }
 
-    foreach ($db->query('SELECT person_id, name_first, name_last, picture_url FROM PERSON') as $row)
+    foreach ($db->query('SELECT person_id, name_first, name_last, picture_url FROM PERSON ORDER BY 2') as $row)
     {
 
       echo "<div class=\"\"> <img src=\""
