@@ -245,7 +245,7 @@ INSERT INTO EMAIL
       , ''
       , 'Magomedshapirov'
       , DATE '03/01/1991'
-      , 'https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiUruzz9JbeAhXfFTQIHYk0BBEQjRx6BAgBEAU&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FZabit_Magomedsharipov&psig=AOvVaw1_6zIx_OsO2QYcooxGngRF&ust=1540189968008372'
+      , 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Zabit_magomedsharipov.jpg/220px-Zabit_magomedsharipov.jpg'
       , (SELECT system_user_id
          FROM system_user
          WHERE system_user_name = 'Nathan'));
