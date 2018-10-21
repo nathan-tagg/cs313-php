@@ -118,3 +118,62 @@ INSERT INTO COMMON_LOOKUP
 , (SELECT system_user_id
    FROM system_user
    WHERE system_user_name = 'Nathan'));
+
+-- Insert some test data --
+
+-- Jose Aldo Junior
+INSERT INTO PERSON
+( SELECT nextval('person_s1')
+, (SELECT common_lookup_id
+   FROM common_lookup
+   WHERE common_lookup_table = 'PERSON' AND common_lookup_type = 'friend')
+, 'Jose'
+, 'Junior'
+, 'Aldo'
+, DATE '09/09/1986'
+, 'http://www.gstatic.com/tv/thumb/persons/796595/796595_v9_ba.jpg'
+, (SELECT system_user_id
+   FROM system_user
+   WHERE system_user_name = 'Nathan'));
+
+-- His phone number
+INSERT INTO TELEPHONE
+( SELECT nextval('telephone_s1')
+, (SELECT common_lookup_id
+   FROM common_lookup
+   WHERE common_lookup_table = 'TELEPHONE' AND common_lookup_type = 'cell')
+, (SELECT currval('person_s1'))
+, 1
+, 111
+, 1111111
+, (SELECT system_user_id
+   FROM system_user
+   WHERE system_user_name = 'Nathan'));
+
+-- His address
+INSERT INTO ADDRESS
+( SELECT nextval('address_s1')
+, (SELECT common_lookup_id
+   FROM common_lookup
+   WHERE common_lookup_table = 'ADDRESS' AND common_lookup_type = 'home')
+, (SELECT currval('person_s1'))
+, 'Brazil'
+, 'Manaus'
+, '69045-240'
+, 'Estrada dos Passaros'
+, ''
+, (SELECT system_user_id
+   FROM system_user
+   WHERE system_user_name = 'Nathan'));
+
+-- His email
+INSERT INTO EMAIL
+( SELECT nextval('email_s1')
+, (SELECT common_lookup_id
+   FROM common_lookup
+   WHERE common_lookup_table = 'EMAIL' AND common_lookup_type = 'personal')
+, currval('person_s1')
+, 'josejunior@gmail.com'
+, (SELECT system_user_id
+   FROM system_user
+   WHERE system_user_name = 'Nathan'));

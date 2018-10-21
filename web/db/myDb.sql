@@ -27,6 +27,7 @@ CREATE TABLE PERSON
 , name_middle  TEXT
 , name_last    TEXT
 , brithday     DATE
+, picture_url  TEXT
 , created_by   INT CONSTRAINT nn_person_1 NOT NULL
 , CONSTRAINT pk_person_1 PRIMARY KEY (person_id)
 , CONSTRAINT fk_person_1 FOREIGN KEY (created_by)  REFERENCES system_user (system_user_id)
