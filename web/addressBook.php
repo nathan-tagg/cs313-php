@@ -33,7 +33,7 @@
       . $row['picture_url']
       . "\" alt=\"" . $row['name_first']
       . "\" style=\"width:15px;height:15px;\"> <p>"
-      . $row['name_first']
+      . $row['name_first'] . " "
       . $row['name_last']
       . "</p></div><br>";
 
