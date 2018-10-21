@@ -177,3 +177,60 @@ INSERT INTO EMAIL
 , (SELECT system_user_id
    FROM system_user
    WHERE system_user_name = 'Nathan'));
+
+   -- Kabib Nurmagomedov
+   INSERT INTO PERSON
+   ( SELECT nextval('person_s1')
+   , (SELECT common_lookup_id
+      FROM common_lookup
+      WHERE common_lookup_table = 'PERSON' AND common_lookup_type = 'friend')
+   , 'Khabib'
+   , ''
+   , 'Nurmagomedov'
+   , DATE '09/09/1986'
+   , 'https://www.thefamouspeople.com/profiles/images/khabib-nurmagomedov-6.jpg'
+   , (SELECT system_user_id
+      FROM system_user
+      WHERE system_user_name = 'Nathan'));
+
+   -- His phone number
+   INSERT INTO TELEPHONE
+   ( SELECT nextval('telephone_s1')
+   , (SELECT common_lookup_id
+      FROM common_lookup
+      WHERE common_lookup_table = 'TELEPHONE' AND common_lookup_type = 'cell')
+   , (SELECT currval('person_s1'))
+   , 2
+   , 222
+   , 2222222
+   , (SELECT system_user_id
+      FROM system_user
+      WHERE system_user_name = 'Nathan'));
+
+   -- His address
+   INSERT INTO ADDRESS
+   ( SELECT nextval('address_s1')
+   , (SELECT common_lookup_id
+      FROM common_lookup
+      WHERE common_lookup_table = 'ADDRESS' AND common_lookup_type = 'home')
+   , (SELECT currval('person_s1'))
+   , 'Russia'
+   , 'Dagastan'
+   , '85309-332'
+   , '85 Blyat DR'
+   , ''
+   , (SELECT system_user_id
+      FROM system_user
+      WHERE system_user_name = 'Nathan'));
+
+   -- His email
+   INSERT INTO EMAIL
+   ( SELECT nextval('email_s1')
+   , (SELECT common_lookup_id
+      FROM common_lookup
+      WHERE common_lookup_table = 'EMAIL' AND common_lookup_type = 'personal')
+   , currval('person_s1')
+   , 'nurmagomedov@gmail.com'
+   , (SELECT system_user_id
+      FROM system_user
+      WHERE system_user_name = 'Nathan'));
