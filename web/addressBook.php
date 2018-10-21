@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Address Book</title>
+    <link rel="stylesheet" href="./addressBook.css">
     <link rel="icon" type="image/png" href="https://cdn1.iconfinder.com/data/icons/book_mac/512/Address_Book.png">
   </head>
   <body>
@@ -25,7 +26,6 @@
       echo 'Error!: ' . $ex->getMessage();
       die();
     }
-
 
     ?>
 
