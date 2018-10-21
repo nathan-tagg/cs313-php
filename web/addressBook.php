@@ -32,7 +32,7 @@
       echo "<div class=\"\"> <img src=\""
       . $row['picture_url']
       . "\" alt=\"" . $row['name_first']
-      . "\" style=\"width:30px;height:30px;border-radius: 50%;\"> <p>"
+      . "\" style=\"width:60px;height:60px;border-radius:50%;vertical-align:middle;display:inline;\"> <p>"
       . $row['name_first'] . " "
       . $row['name_last']
       . "</p></div><br>";
