@@ -19,7 +19,6 @@
     {
       $db = new PDO("pgsql:host=$host;port=5432;dbname=$dbname", $username, $password);
       $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      if($db){echo "<footer>Connected to the <strong>$dbname</strong> database successfully!<footer>";}
     }
     catch (PDOException $ex)
     {
@@ -27,6 +26,18 @@
       die();
     }
 
+    foreach ($db->query('SELECT person_id, name_first, name_last, picture_url FROM PERSON') as $row)
+    {
+
+      echo "<div class=\"\"> <img src=\""
+      . $row['picture_url']
+      . "\" alt=\"" . $row['name_first']
+      . "\" style=\"width:15px;height:15px;\"> <p>"
+      . $row['name_first']
+      . $row['name_last']
+      . "</p></div><br>";
+
+    }
     ?>
 
   </body>
