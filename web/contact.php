@@ -1,5 +1,5 @@
 <?php
-$name = htmlspecialchars($_POST[""]);
+$person_id = htmlspecialchars($_POST[""]);
 ?>
 
 <!DOCTYPE html>
