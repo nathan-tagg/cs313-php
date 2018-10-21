@@ -19,7 +19,7 @@
     {
       $db = new PDO("pgsql:host=$host;port=5432;dbname=$dbname", $username, $password);
       $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      if($db){echo "Connected to the <strong>$dbname</strong> database successfully!";}
+      if($db){echo "<footer>Connected to the <strong>$dbname</strong> database successfully!<footer>";}
     }
     catch (PDOException $ex)
     {
