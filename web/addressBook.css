@@ -1,7 +1,6 @@
 body {
   background-color: #fffcf4;
-  font-family: Helvetica;
-  text-shadow: 0px 0px 1px black;
+  font-family: Helvetica;\
 }
 
 h1 {
@@ -25,4 +24,31 @@ p {
   vertical-align: middle;
   padding-top: 0px;
   padding-bottom: 0px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+input[type=submit] {
+  font-size: 15px;
+  text-shadow: none;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  border-radius: 0px;
+  border: 1px dotted black;
+}
+
+input[type=submit]:hover {
+  border: 1px solid black;
+  font-style: italic;
+}
+
+input[type=submit]:visited {
+  color: black;
 }

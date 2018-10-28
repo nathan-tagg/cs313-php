@@ -36,9 +36,12 @@
       . $row['name_first'] . " "
       . $row['name_last']
       . "</p></div><br>";
-
     }
     ?>
+
+    <blockquote style="text-align:center">
+        <i><a href="./addContact.html" style="text-align: center;">New Contact</a></i>
+    </blockquote>
 
   </body>
 </html>

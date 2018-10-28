@@ -1,7 +1,3 @@
-<?php
-$person_id = htmlspecialchars($_POST[""]);
-?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
