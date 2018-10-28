@@ -52,3 +52,23 @@ input[type=submit]:hover {
 input[type=submit]:visited {
   color: black;
 }
+
+
+a {
+  font-size: 15px;
+  text-shadow: none;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  border-radius: 0px;
+  border: 1px dotted black;
+}
+
+a:hover {
+  border: 1px solid black;
+  font-style: italic;
+}
+
+a:visited {
+  color: black;
+}
