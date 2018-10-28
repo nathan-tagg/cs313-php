@@ -37,18 +37,9 @@ catch (PDOException $ex)
   die();
 }
 
-$query =
-'INSERT INTO PERSON
- ( SELECT nextval('person_s1')
- , :relationship
- , :name_first
- , :name_middle
- , :name_last
- , :birthday
- , :picture
- , (SELECT system_user_id
-    FROM system_user
-    WHERE system_user_name = 'Nathan'))';
+
+
+$query = 'INSERT INTO PERSON(SELECT nextval(\'person_s1\'), :relationship, :name_first, :name_middle, :name_last, :birthday, :picture, (SELECT system_user_id FROM system_user WHERE system_user_name = \'Nathan\'))';
 
   $statement = $db->prepare($query);
 
@@ -59,6 +50,7 @@ $query =
   $statement->bindValue(':birthday', $birthday);
   $statement->bindValue(':picture', $picture);
   $statement->execute();
+
  ?>
 
 <!DOCTYPE html>
