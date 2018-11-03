@@ -29,7 +29,7 @@
     foreach ($db->query('SELECT person_id, name_first, name_last, picture_url FROM PERSON ORDER BY 2') as $row)
     {
 
-      echo '<form name="" action="./contact.php" onsubmit="" method="post"> <img src="'
+      echo '<form name="contact" action="./contact.php" onsubmit="" method="post"> <img src="'
       . $row['picture_url']
       . '" ALIGN="left" alt="'
       . $row['name_first']
