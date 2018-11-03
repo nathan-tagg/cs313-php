@@ -59,7 +59,6 @@ $query = 'INSERT INTO PERSON(SELECT nextval(\'person_s1\'), :relationship, :name
 
 for ($i=1; $i <= $numberOfPhoneNumbers; $i++) {
 
-
   $telephone_type = htmlspecialchars($_POST['telephone_type' . $i]);
   $country_code = htmlspecialchars($_POST['countryCode' . $i]);
   $area_code = htmlspecialchars($_POST['areaCode' . $i]);
@@ -79,9 +78,9 @@ for ($i=1; $i <= $numberOfPhoneNumbers; $i++) {
     $statement = $db->prepare($query);
 
     $statement->bindValue(':telephone_type', $telephone_type);
-    $statement->bindValue(':name_first', $country_code);
-    $statement->bindValue(':name_middle', $area_code);
-    $statement->bindValue(':name_last', $telephone_number);
+    $statement->bindValue(':country_code', $country_code);
+    $statement->bindValue(':area_code', $area_code);
+    $statement->bindValue(':telephone_number', $telephone_number);
 
     $statement->execute();
 }
