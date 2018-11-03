@@ -32,6 +32,11 @@
         return false;
       }
 
+      //Set the values of each numberOf inputs
+      document.getElementById("numberOfPhoneNumbers").value = "" + numberOfPhoneNumbers;
+      document.getElementById("numberOfAddresses").value = "" + numberOfAddresses;
+      document.getElementById("numberOfEmails").value = "" + numberOfEmails;
+
     }
 
     function addPhone() {
@@ -117,9 +122,9 @@
       <input type="button" value="Add an address" onclick="addAddress();" />
       <input type="button" value="Add an email" onclick="addEmail();" />
 
-      <input type="hidden" name="numberOfPhoneNumbers" value=''>
-      <input type="hidden" name="numberOfAddresses" value=''>
-      <input type="hidden" name="numberOfEmails" value=''>
+      <input id="numberOfPhoneNumbers" type="hidden" name="numberOfPhoneNumbers" value=''>
+      <input id="numberOfAddresses" type="hidden" name="numberOfAddresses" value=''>
+      <input id="numberOfEmails" type="hidden" name="numberOfEmails" value=''>
 
       <blockquote style="text-align:center">
           <i><input type="submit" value="Create contact"></i>
