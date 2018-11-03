@@ -29,21 +29,23 @@
     foreach ($db->query('SELECT person_id, name_first, name_last, picture_url FROM PERSON ORDER BY 2') as $row)
     {
 
-      echo '<div class=""> <img src="'
+      echo '<form name="" action="./contact.php" onsubmit="" method="post"> <img src="'
       . $row['picture_url']
       . '" ALIGN="left" alt="'
       . $row['name_first']
-      . '" style="width:60px;height:60px;border-radius:50%;padding-right:10px"> <p>'
+      . '" style="width:60px;height:60px;border-radius:50%;padding-right:10px"> <input type="submit" value='
       . $row['name_first']
       . ' '
       . $row['name_last']
-      . '</p></div><br>';
+      . '></form><br>';
     }
     ?>
 
     <blockquote style="text-align:center">
         <i><a href="./addContact.html" style="text-align: center;">New Contact</a></i>
     </blockquote>
+
+
 
   </body>
 </html>
