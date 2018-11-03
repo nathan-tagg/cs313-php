@@ -36,7 +36,7 @@
       . $row['picture_url']
       . '" ALIGN="left" alt="'
       . $row['name_first']
-      . '" style="width:60px;height:60px;border-radius:50%;padding-right:10px"> <input type="submit" style="font-size:30px;" value="'
+      . '" style="width:60px;height:60px;border-radius:50%;padding-right:10px"> <input type="submit" style="font-size:30px;margin-top:8px" value="'
       . $row['name_first']
       . ' '
       . $row['name_last']
