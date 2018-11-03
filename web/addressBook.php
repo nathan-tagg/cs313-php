@@ -29,13 +29,15 @@
     foreach ($db->query('SELECT person_id, name_first, name_last, picture_url FROM PERSON ORDER BY 2') as $row)
     {
 
-      echo "<div class=\"\"> <img src=\""
+      echo '<div class=""> <img src="'
       . $row['picture_url']
-      . "\" ALIGN=\"left\" alt=\"" . $row['name_first']
-      . "\" style=\"width:60px;height:60px;border-radius:50%;padding-right:10px\"> <p>"
-      . $row['name_first'] . " "
+      . '" ALIGN="left" alt="'
+      . $row['name_first']
+      . '" style="width:60px;height:60px;border-radius:50%;padding-right:10px"> <p>'
+      . $row['name_first']
+      . ' '
       . $row['name_last']
-      . "</p></div><br>";
+      . '</p></div><br>';
     }
     ?>
 
