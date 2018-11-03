@@ -82,7 +82,8 @@ for ($i=1; $i <= $numberOfPhoneNumbers; $i++) {
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Contact Created! :)</title>
+    <link rel="stylesheet" href="./addressBook.css">
   </head>
   <body>
     <h1>Contact added</h1>
