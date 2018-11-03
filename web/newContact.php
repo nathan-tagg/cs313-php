@@ -59,6 +59,21 @@ $query = 'INSERT INTO PERSON(SELECT nextval(\'person_s1\'), :relationship, :name
 
 for ($i=1; $i <= $numberOfPhoneNumbers; $i++) {
 
+  $host = 'ec2-54-235-73-241.compute-1.amazonaws.com';
+  $dbname = 'ddgliuko4bnn30';
+  $username = 'lrjdfhijghkjgr';
+  $password = '022793f308a02ea702614c5a2d20ac4d2ab20840c3c722847c870416949c3e2f';
+  try
+  {
+    $db = new PDO("pgsql:host=$host;port=5432;dbname=$dbname", $username, $password);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  }
+  catch (PDOException $ex)
+  {
+    echo 'Error!: ' . $ex->getMessage();
+    die();
+  }
+
   $telephone_type = htmlspecialchars($_POST['telephone_type' . $i]);
   $country_code = htmlspecialchars($_POST['countryCode' . $i]);
   $area_code = htmlspecialchars($_POST['areaCode' . $i]);
