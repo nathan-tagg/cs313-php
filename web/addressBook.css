@@ -74,5 +74,5 @@ a:visited {
 }
 
 form {
-  align-self: baseline;
+  display: block;
 }
