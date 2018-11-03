@@ -10,6 +10,10 @@
 
     <h1>Contacts</h1>
 
+    <blockquote style="text-align:center">
+        <i><a href="./addContact.html" style="text-align: center;">New Contact</a></i>
+    </blockquote>
+
     <?
     $host = 'ec2-54-235-73-241.compute-1.amazonaws.com';
     $dbname = 'ddgliuko4bnn30';
@@ -39,12 +43,6 @@
       . '"></form><br></div></blockquote>';
     }
     ?>
-
-    <blockquote style="text-align:center">
-        <i><a href="./addContact.html" style="text-align: center;">New Contact</a></i>
-    </blockquote>
-
-
 
   </body>
 </html>
