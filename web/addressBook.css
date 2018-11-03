@@ -72,3 +72,7 @@ a:hover {
 a:visited {
   color: black;
 }
+
+form {
+  align-self: baseline;
+}
