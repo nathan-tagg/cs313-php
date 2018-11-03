@@ -37,7 +37,7 @@
       . $row['name_first']
       . ' '
       . $row['name_last']
-      . '></form><br>';
+      . '"></form><br>';
     }
     ?>
 
