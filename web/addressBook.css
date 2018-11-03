@@ -1,12 +1,14 @@
 body {
   background-color: #fffcf4;
-  font-family: Helvetica;\
+  font-family: Helvetica;
 }
 
 h1 {
   text-align: center;
   font-size: 90px;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 0px;
+  margin: 0px;
 }
 
 div {
@@ -55,13 +57,15 @@ input[type=submit]:visited {
 
 
 a {
-  font-size: 15px;
+  font-size: 20px;
   text-shadow: none;
   border: 0;
   background: none;
   box-shadow: none;
   border-radius: 0px;
   border: 1px dotted black;
+  padding: 2px;
+  margin: 5px;
 }
 
 a:hover {
@@ -71,9 +75,4 @@ a:hover {
 
 a:visited {
   color: black;
-}
-
-form {
-  display: block;
-  margin-left: 
 }
