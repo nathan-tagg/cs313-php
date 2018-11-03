@@ -74,15 +74,19 @@ for ($i=1; $i <= $numberOfPhoneNumbers; $i++) {
     die();
   }
 
-  $telephone_type = htmlspecialchars($_POST['telephone_type' . $i]);
-  $country_code = htmlspecialchars($_POST['countryCode' . $i]);
-  $area_code = htmlspecialchars($_POST['areaCode' . $i]);
-  $telephone_number = htmlspecialchars($_POST['phoneNumber' . $i]);
+  $telephone_type = htmlspecialchars($_POST['telephone_type' + $i]);
+  $country_code = htmlspecialchars($_POST['countryCode' + $i]);
+  $area_code = htmlspecialchars($_POST['areaCode' + $i]);
+  $telephone_number = htmlspecialchars($_POST['phoneNumber' + $i]);
 
-  $query = '';
+  $query = 'INSERT INTO TELEPHONE(SELECT nextval(\'telephone_s1\'), :telephone_type, (SELECT currval(\'person_s1\')), :country_code, :area_code, :telephone_number, (SELECT system_user_id FROM system_user WHERE system_user_name = \'Nathan\'))';
 
     $statement = $db->prepare($query);
 
+    $statement->bindValue(':telephone_type', $telephone_type);
+    $statement->bindValue(':country_code', $country_code);
+    $statement->bindValue(':area_code', $area_code);
+    $statement->bindValue(':telephone_number', $telephone_number);
 
     $statement->execute();
 }
