@@ -59,7 +59,7 @@ $query = 'INSERT INTO PERSON(SELECT nextval(\'person_s1\'), :relationship, :name
 
 for ($i=1; $i <= $numberOfPhoneNumbers; $i++) {
 
-  $telephone_type = htmlspecialchars($_POST['telephone_type' + $i]);
+//  $telephone_type = htmlspecialchars($_POST['telephone_type' + $i]);
 //  $country_code = htmlspecialchars($_POST['countryCode' + $i]);
 //  $area_code = htmlspecialchars($_POST['areaCode' + $i]);
 //  $telephone_number = htmlspecialchars($_POST['phoneNumber' + $i]);
