@@ -36,20 +36,6 @@
 
       }
 
-
-      for (var i = 0; i <= phoneNumbers.length; i++) {
-        var x = document.forms["newContact"]['areaCode' + phoneNumbers[i]].value;
-        var y = document.forms["newContact"]['phoneNumber' + phoneNumbers[i]].value;
-        if (x == "") {
-          alert("Please enter an area code");
-          return false;
-        }
-        if (y == "") {
-          alert("Please enter a phone number");
-          return false;
-        }
-      }
-
       //Set the values of each numberOf inputs
       document.getElementById("numberOfPhoneNumbers").value = "" + numberOfPhoneNumbers;
       document.getElementById("numberOfAddresses").value = "" + numberOfAddresses;
