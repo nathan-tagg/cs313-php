@@ -30,6 +30,21 @@
       if (x == "" && y == "") {
         alert("Please provide either a first or last name.");
         return false;
+
+      }
+
+      for (var i = 1; i <= numberOfPhoneNumbers; i++) {
+        if (document.forms["newContact"]["areaCode" + i].value == "") {
+          alert("Please enter an area code");
+          return false;
+        }
+      }
+
+      for (var i = 1; i <= numberOfPhoneNumbers; i++) {
+        if (document.forms["newContact"]["areaCode" + i].value == "") {
+          alert("Please enter an area code");
+          return false;
+        }
       }
 
       //Set the values of each numberOf inputs
@@ -41,7 +56,7 @@
 
     function addPhone() {
       numberOfPhoneNumbers++;
-      var element = '<div id="' + key + '"style="margin:0px; padding:0px; display: block;"><br>Phone #' + numberOfPhoneNumbers + '<br><label for="countryCode">Country code: </label><input style="width: 15px;" type="number" name="countryCode' + numberOfPhoneNumbers + '" value="1"> <br><label for="areaCode">Area code: </label> <input type="number" name="areaCode' + numberOfPhoneNumbers + '" value=""> <br><label for="phoneNumber">Phone number: </label> <input type="number" name="phoneNumber' + numberOfPhoneNumbers + '" value=""> <br><input type="radio" name="telephone_type' + numberOfPhoneNumbers + '" value="home"> Home<input type="radio" name="telephone_type' + numberOfPhoneNumbers + '" value="cell"> Cell<input type="radio" name="telephone_type' + numberOfPhoneNumbers + '" value="work"> Work<input type="button" name="" value="Remove" onclick="removeTelephone(' + (key++) + ')"> <br></div>';
+      var element = '<div id="' + key + '"style="margin:0px; padding:0px; display: block;"><br>Phone #' + numberOfPhoneNumbers + '<br><label for="countryCode">Country code: </label><input style="width: 15px;" type="number" min="1" max="9999999" name="countryCode' + numberOfPhoneNumbers + '" value="1"> <br><label for="areaCode">Area code: </label> <input type="number" name="areaCode' + numberOfPhoneNumbers + '" value=""> <br><label for="phoneNumber">Phone number: </label> <input type="number" name="phoneNumber' + numberOfPhoneNumbers + '" value=""> <br><input type="radio" name="telephone_type' + numberOfPhoneNumbers + '" value="home"> Home<input type="radio" name="telephone_type' + numberOfPhoneNumbers + '" value="cell"> Cell<input type="radio" name="telephone_type' + numberOfPhoneNumbers + '" value="work"> Work<input type="button" name="" value="Remove" onclick="removeTelephone(' + (key++) + ')"> <br></div>';
       document.getElementById('phones').innerHTML += element;
       console.log(numberOfPhoneNumbers);
     }
@@ -98,7 +113,7 @@
       <br><br>
 
       Birthday: <br>
-      <input type="date" name="birthday" value=NULL>
+      <input type="date" name="birthday" value="1990-01-01">
 
       <br><br>
 

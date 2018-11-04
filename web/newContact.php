@@ -20,6 +20,9 @@ switch (htmlspecialchars($_POST["relationship"])) {
         $relationship = null;
 }
 $birthday = htmlspecialchars($_POST["birthday"]);
+if ($birthday == NULL) {
+  $birthday =
+}
 $picture = htmlspecialchars($_POST["image"]);
 
 $numberOfPhoneNumbers = (int)htmlspecialchars($_POST['numberOfPhoneNumbers']);
