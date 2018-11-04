@@ -100,7 +100,7 @@ for ($i=1; $i <= $numberOfAddresses; $i++) {
   $state = htmlspecialchars($_POST['state' . $i]);
   $postal_code = htmlspecialchars($_POST['postalCode' . $i]);
   $street_address = htmlspecialchars($_POST['streetAddress' . $i]);
-  $apartment = htmlspecialchars($_POST['apartment'] . $i);
+  $apartment = htmlspecialchars($_POST['apartment' . $i]);
   $query = "INSERT INTO ADDRESS
             ( SELECT nextval('address_s1')
             , :address_type
