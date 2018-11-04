@@ -41,7 +41,7 @@
         var x = document.forms["newContact"]['areaCode' + phoneNumbers[i]].value;
         var y = document.forms["newContact"]['areaCode' + phoneNumbers[i]].value;
         if (x == "" && y== "") {
-
+          removeTelephone(phoneNumbers[i];);
         }
         else if (x == "") {
           alert("Please enter an area code");
