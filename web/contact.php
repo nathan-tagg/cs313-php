@@ -15,9 +15,9 @@ catch (PDOException $ex)
   die();
 }
 
-$person_id = htmlspecialchars($_POST["person_id"]);
+htmlspecialchars($_POST["person_id"]);
 $statement = $db->prepare('SELECT name_first, name_last, picture_url FROM PERSON WHERE person_id = ?');
-$statement->execute(array([$person_id]));
+$statement->execute([htmlspecialchars($_POST["person_id"])]);
 $row = $statement->fetchAll(PDO::FETCH_NUM);
 echo '<img src="' . $row[0] . '" alt="">';
 
