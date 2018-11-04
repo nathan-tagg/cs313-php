@@ -22,6 +22,7 @@ $statement->execute(array(':person_id' => $person_id);
 $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 $picture = $rows['picture_url'];
+echo '<img src="' . $picture . '" alt="">';
 
  ?>
 
@@ -36,7 +37,7 @@ $picture = $rows['picture_url'];
 
     <blockquote>
       <div class="person">
-        <?echo '<img src="' . $picture . '" alt="">';?>
+
       </div>
     </blockquote>
 
