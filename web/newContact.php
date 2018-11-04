@@ -58,10 +58,22 @@ $query = 'INSERT INTO PERSON(SELECT nextval(\'person_s1\'), :relationship, :name
 // Insert the telephones
 
 for ($i=1; $i <= $numberOfPhoneNumbers; $i++) {
-  $telephone_type = htmlspecialchars($_POST['telephone_type' + $i]);
-  $country_code = htmlspecialchars($_POST['countryCode' + $i]);
-  $area_code = htmlspecialchars($_POST['areaCode' + $i]);
-  $telephone_number = htmlspecialchars($_POST['phoneNumber' + $i]);
+  switch (htmlspecialchars($_POST['telephone_type' + $i])) {
+      case 'home':
+          $telephone_type = 1006;
+          break;
+      case 'work':
+          $telephone_type = 1008;
+          break;
+      case 'cell':
+          $telephone_type = 1007;
+          break;
+      default:
+          $telephone_type = null;
+  }
+  $country_code = (int)htmlspecialchars($_POST['countryCode' + $i]);
+  $area_code = (int)htmlspecialchars($_POST['areaCode' + $i]);
+  $telephone_number = (int)htmlspecialchars($_POST['phoneNumber' + $i]);
   $query = 'INSERT INTO TELEPHONE(SELECT nextval(\'telephone_s1\'), :telephone_type, (SELECT currval(\'person_s1\')), :country_code, :area_code, :telephone_number, (SELECT system_user_id FROM system_user WHERE system_user_name = \'Nathan\'))';
     $statement = $db->prepare($query);
     $statement->bindValue(':telephone_type', $telephone_type);
