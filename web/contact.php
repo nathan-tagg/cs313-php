@@ -19,10 +19,11 @@ $person_id = htmlspecialchars($_POST["person_id"]);
 
 $statement = $db->prepare('SELECT name_first, name_last, picture_url FROM PERSON WHERE person_id  = :person_id');
 $statement->execute(array(':person_id' => $person_id);
-$rows = $statement->fetchAll(PDO::FETCH_ASSOC);
+while ($row = $statement->fetchAll(PDO::FETCH_ASSOC)) {
+  echo '<img src="' . $row['picture_url'] . '" alt="">';
+}
 
-$picture = $rows['picture_url'];
-echo '<img src="' . $picture . '" alt="">';
+
 
  ?>
 
