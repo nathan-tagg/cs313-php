@@ -291,18 +291,3 @@ INSERT INTO EMAIL
       , (SELECT system_user_id
          FROM system_user
          WHERE system_user_name = 'Nathan'));
-
-         -- test stuff ingnore
-         INSERT INTO PERSON
-         ( SELECT nextval('person_s1')
-         , (SELECT common_lookup_id
-            FROM common_lookup
-            WHERE common_lookup_table = 'PERSON' AND common_lookup_type = 'friend')
-         , '1'
-         , ''
-         , '1'
-         , DATE ''
-         , 'https://www.thefamouspeople.com/profiles/images/khabib-nurmagomedov-6.jpg'
-         , (SELECT system_user_id
-            FROM system_user
-            WHERE system_user_name = 'Nathan'));
