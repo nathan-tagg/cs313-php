@@ -17,9 +17,11 @@ catch (PDOException $ex)
 
 $person_id = htmlspecialchars($_POST["person_id"]);
 
-foreach ($db->query('SELECT name_first, name_last, picture_url FROM PERSON WHERE person_id  =' . $person_id) as $row) {
-$picture = $row['picture_url'];
-}
+$statement = $db->prepare('SELECT name_first, name_last, picture_url FROM PERSON WHERE person_id  = :person_id');
+$statement->execute(array(':person_id' => $person_id);
+$rows = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+$picture = $rows['picture_url'];
 
  ?>
 
