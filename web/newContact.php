@@ -57,7 +57,7 @@ $query = 'INSERT INTO PERSON(SELECT nextval(\'person_s1\'), :relationship, :name
 
 // Insert the telephones
 for ($i=1; $i <= $numberOfPhoneNumbers; $i++) {
-  switch (htmlspecialchars($_POST['telephone_type' + $i])) {
+  switch (htmlspecialchars($_POST['telephone_type' . $i])) {
       case 'home':
           $telephone_type = 1006;
           break;
@@ -85,7 +85,7 @@ for ($i=1; $i <= $numberOfPhoneNumbers; $i++) {
 
 // Insert the addresses
 for ($i=1; $i <= $numberOfAddresses; $i++) {
-  switch (htmlspecialchars($_POST['address_type' + $i])) {
+  switch (htmlspecialchars($_POST['address_type' . $i])) {
       case 'home':
           $address_type = 1009;
           break;
