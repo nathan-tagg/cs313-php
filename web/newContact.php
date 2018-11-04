@@ -84,21 +84,23 @@ for ($i=1; $i <= $numberOfPhoneNumbers; $i++) {
 }
 
 // Insert the addresses
-/*for ($i=1; $i <= $numberOfAddresses; $i++) {
+for ($i=1; $i <= $numberOfAddresses; $i++) {
   switch (htmlspecialchars($_POST['address_type' + $i])) {
       case 'home':
-          $telephone_type = 1009;
+          $address_type = 1009;
           break;
       case 'work':
-          $telephone_type = 1010;
+          $address_type = 1010;
           break;
       default:
-          $telephone_type = null;
+          $address_type = null;
   }
 
-  $country_code = (int)htmlspecialchars($_POST['countryCode' . $i]);
-  $area_code = (int)htmlspecialchars($_POST['areaCode' . $i]);
-  $telephone_number = (int)htmlspecialchars($_POST['phoneNumber' . $i]);
+  $country = htmlspecialchars($_POST['country' . $i]);
+  $state = htmlspecialchars($_POST['state' . $i]);
+  $postal_code = htmlspecialchars($_POST['postalCode' . $i]);
+  $street_address = htmlspecialchars($_POST['streetAddress' . $i]);
+  $apartment = htmlspecialchars($_POST['apartment'] . $i);
   $query = "INSERT INTO ADDRESS
             ( SELECT nextval('address_s1')
             , :address_type
@@ -110,7 +112,7 @@ for ($i=1; $i <= $numberOfPhoneNumbers; $i++) {
             , :apartment
             , (SELECT system_user_id
                FROM system_user
-               WHERE system_user_name = 'Nathan'));
+               WHERE system_user_name = 'Nathan'))";
     $statement = $db->prepare($query);
     $statement->bindValue(':address_type', $address_type);
     $statement->bindValue(':country', $country);
@@ -119,7 +121,7 @@ for ($i=1; $i <= $numberOfPhoneNumbers; $i++) {
     $statement->bindValue(':street_address', $street_address);
     $statement->bindValue(':apartment', $apartment);
     $statement->execute();
-}*/
+}
  ?>
 
 <!DOCTYPE html>
