@@ -122,6 +122,34 @@ for ($i=1; $i <= $numberOfAddresses; $i++) {
     $statement->bindValue(':apartment', $apartment);
     $statement->execute();
 }
+
+for ($i=1; $i <= $numberOfEmails; $i++) {
+  switch (htmlspecialchars($_POST['email_type' . $i])) {
+      case 'work':
+          $email_type = 1012;
+          break;
+      case 'personal':
+          $email_type = 1011;
+          break;
+      default:
+          $email_type = null;
+  }
+
+  $email = htmlspecialchars($_POST['email' . $i]);
+  $query = "INSERT INTO EMAIL
+            ( SELECT nextval('email_s1')
+            , :email_type
+            , (SELECT currval('person_s1'))
+            , :email
+            , (SELECT system_user_id
+               FROM system_user
+               WHERE system_user_name = 'Nathan'))";
+    $statement = $db->prepare($query);
+    $statement->bindValue(':email_type', $email_type);
+    $statement->bindValue(':email', $email);
+    $statement->execute();
+}
+
  ?>
 
 <!DOCTYPE html>

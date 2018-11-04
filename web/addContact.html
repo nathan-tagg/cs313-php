@@ -33,7 +33,25 @@
 
       }
 
-      for (var i = 1; i <= numberOfPhoneNumbers; i++) {
+
+
+      for (var i = 1; i <= key; i++) {
+        var x = document.forms["newContact"]["areaCode" + i].value;
+        var y = document.forms["newContact"]["phoneNumber" + i].value;
+        if (x == "" && y== "") {
+
+        }
+        else if (x == "") {
+          alert("Please enter an area code");
+          return false;
+        }
+        else if (y == "") {
+          alert("Please enter a phone number");
+          return false;
+        }
+      }
+
+      for (var i = 1; i <= numberOfAddresses; i++) {
         if (document.forms["newContact"]["areaCode" + i].value == "") {
           alert("Please enter an area code");
           return false;
@@ -43,7 +61,6 @@
           return false;
         }
       }
-
       //Set the values of each numberOf inputs
       document.getElementById("numberOfPhoneNumbers").value = "" + numberOfPhoneNumbers;
       document.getElementById("numberOfAddresses").value = "" + numberOfAddresses;
@@ -67,7 +84,7 @@
 
     function addEmail() {
       numberOfEmails++;
-      var element = '<div id="' + key + '" style="margin:0px; padding:0px; display: block;"><br>Email #' + numberOfEmails + '<br> Email address: <br><input type="text" name="email' + numberOfEmails + '" value=""> <br><input type="radio" name="radio_type' + numberOfEmails + '" value="work"> Work<input type="radio" name="radio_type' + numberOfEmails + '" value="Personal"> Personal<input type="button" name="remove' + numberOfEmails + '" value="Remove" onclick="removeEmail(' + (key++) +')"></div>'
+      var element = '<div id="' + key + '" style="margin:0px; padding:0px; display: block;"><br>Email #' + numberOfEmails + '<br> Email address: <br><input type="text" name="email' + numberOfEmails + '" value=""> <br><input type="radio" name="email_type' + numberOfEmails + '" value="work"> Work<input type="radio" name="email_type' + numberOfEmails + '" value="personal"> Personal<input type="button" name="remove' + numberOfEmails + '" value="Remove" onclick="removeEmail(' + (key++) +')"></div>'
       document.getElementById('emails').innerHTML += element;
       console.log(numberOfEmails);
     }
